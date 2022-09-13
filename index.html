@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<head>
+  <script src="https://kit.fontawesome.com/2e1f6f0508.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 要讓heght100%就要設定html,body margin.padding:0 height100% */
+
+    html,body{
+      width: 100%;
+      height: 100%;
+      font-family: Roboto;
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      overflow: auto;
+    }
+    body::-webkit-scrollbar{
+    display: none;
+    }
+
+    .top{
+      width: 100%;
+      height: 60px;
+      /* background-color: lightblue; */
+      float: left;
+      border-bottom:solid 2px lightgray;
+
+    }
+    .left{
+      width: 14%;
+      height:107%;
+      background-color: #FFFFFF;
+      float: left;
+      overflow: auto;
+    }
+
+    .left::-webkit-scrollbar { width: 8px;}
+  /* /left的軌道 */ 
+    .left::-webkit-scrollbar-track { background: transparent }
+  /* left尚未滑到的軌道*/ 
+    .left::-webkit-scrollbar-track-piece{ background: transparent; }
+  /* /left的區塊 */ 
+    .left::-webkit-scrollbar-thumb { background: transparent; }
+
+    .left:hover{
+      overflow: auto;
+    }
+    .left:hover::-webkit-scrollbar-thumb { background:gray;border-radius: 5px; }
+
+
+    .right{
+      width: 86%;
+      height: 100%;
+      /* background-color: lightgreen; */
+      float: right;
+    }
+    .menu{
+      width: 100%;
+      height: 50px;
+      overflow-x:scroll;
+      border-bottom:solid 2px lightgray;
+    }
+
+  /* 整個捲軸 */
+  .menu::-webkit-scrollbar { width: 1px;height: 5px;}
+  /* 捲軸的軌道 */
+  .menu::-webkit-scrollbar-track { background: transparent }
+  /*捲軸尚未滑到的軌道*/
+  .menu::-webkit-scrollbar-track-piece{ background: transparent; }
+  /* 滑動的區塊 */
+  .menu::-webkit-scrollbar-thumb { background: rgb(252, 181, 198 ); }
+  /* 滑鼠移到滑動的區塊上 */
+  .menu::-webkit-scrollbar-thumb:hover { background: #aaa; }
+
+
+    iframe{
+      width: 100%;
+      height: 100%;
+      background-color: #f9f9f9;
+    }
+    .guide:active{
+      border-radius: 50%;
+      background-color: lightgrey;
+    }
+    .leftmenu{
+      width: 100%;
+      font-size: 16px;
+    }
+    .leftmenu tr{
+      height: 40px;
+    }
+
+    .leftmenu tr:hover {
+      background-color: #f2f2f2;
+      cursor: pointer;
+    }
+
+    .home{
+      width: 20px;
+    }    
+
+    .menu table{
+      height: 80%;
+      width: 100%;
+      margin-top: 7px;
+      border-collapse: separate;
+      /* td間距 tr間距 */
+      border-spacing: 8px 0px;
+      /* 均分欄寬 */
+      /* table-layout: fixed; */
+    }
+
+    .menu td{
+      /* 使表格寬度隨文字擴大 */
+      padding: 0px;
+      text-overflow: ellipsis;
+      white-space:nowrap;
+      text-align: center;
+      background-color: #f2f2f2;
+      border-radius:  30px;
+      font-size: 16px;
+      border:solid 1px lightgray;
+      /* line-height: 50px; */
+    }
+
+    .menu td:hover{
+      /* 使表格寬度隨文字擴大 */
+      text-overflow: ellipsis;
+      white-space:nowrap;
+      text-align: center;
+      background-color:#E5E5E5 ;
+      cursor: pointer;
+    }
+
+    .menu td a{
+      text-decoration: none;
+      color: black
+    }
+
+    hr{
+      margin: 0;
+      padding: 0;
+      height: 0px;
+      background: lightgray;
+    }
+
+
+    .hr:hover{
+      cursor:auto;
+      background-color: #FFFFFF;
+    }
+
+    .searchbar{
+      width: 600px;
+      height: 40px; 
+      position: absolute;
+      margin: 10px 0px 0px 40%;
+      /* background: lightblue; */
+    }
+    
+    #search{
+      position:absolute;
+      width: 450px;
+      height: 40px;
+      font-size: 16px;
+    }
+    .button{
+      position:absolute;
+      width: 46px;
+      height: 40px;
+      border-top: 1px solid;
+      border-right: 1px solid;      
+      border-bottom: 1px solid;
+      border-left: none;
+      left:450px;
+      background-size: contain;
+    }
+    .button:hover{
+      cursor: pointer;
+    }
+    .micro{
+      position:absolute;
+      width: 45px;
+      height: 40px;
+      left:505px;
+      border-radius: 50%;
+      background-color: #F8F8F8;
+      text-align: center;
+    }
+    .micro img{
+      position: absolute;
+      top:3px;
+      right:6px;
+    }
+
+    .account{
+      position:absolute;
+      width: 240px;
+      height:55px;
+      right:0px;
+      border-spacing:-20px -20px ;
+    }
+    .account td{
+      width: 240px;
+      text-align: center;
+    }
+    .plus{
+      position:absolute;
+      width: 30px;
+      bottom: 8px;
+      left:13px;
+    }
+    .nine{
+      position:absolute;
+      left: 65px;
+      width: 20px;
+      bottom: 13px;
+    }
+    .bell{
+      position:absolute;
+      left: 108px;
+      width: 23px;
+      bottom: 12px;
+    }
+    .acc{
+      position: absolute;
+      width: 40px;
+      border-radius: 50%;
+      left: 155px;
+      bottom: 4px;
+    }
+
+    .plus:hover{
+      cursor: pointer;
+    } 
+    .nine:hover{
+      cursor: pointer;
+    }
+    .bell:hover{
+      cursor: pointer;
+    }
+
+    .acc:hover{
+      cursor: pointer;
+    }
+
+    .micro:hover{
+      cursor: pointer;
+    }
+
+    .cc:hover{
+      background-color: #FFFFFF;
+    }
+
+    .ccc:hover{
+      background-color: #FFFFFF;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div class="searchbar">
+      <input type="search" name="search" id="search" placeholder="搜尋">
+      <input style="background-image: url(./img/search.png);"type="button" value="" class="button" title="搜尋">
+      <div class="micro">
+        <img style="width: 35px;" src="./img/microphone.png" alt="使用語音搜尋" title="使用語音搜尋">
+      </div>
+    </div>
+    <table style="position: absolute;border-spacing: 8px;left: 8px;text-align: center;">
+      <tr>
+        <td style="width: 40px;height: 40px;cursor: pointer;" class="guide">
+        <img src="./img/menu.png" style="width: 30px;height: 30px;" >
+        </td>
+        <td>
+          <a href="./index.html">
+          <img src="./img/youtube.png" title="YouTube 首頁"style="width: 100px;cursor: pointer;" alt="">
+          </a>
+        </td>
+      </tr>
+    </table>
+    <table class="account">
+      <tr>
+        <td>
+        <img class="plus"src="./img/add-video.png" alt="建立" title="建立"> 
+        <img class="nine"src="./img/nine-thumbnail-squares-button.png" alt="Youtube 應用程式" title="Youtube 應用程式">
+        <img class="bell"src="./img/bell.png" alt="通知"title="通知">
+        <img class="acc" src="./img/acc.png" alt="帳戶" title="帳戶">
+      </td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="left">
+    <table class="leftmenu">
+      <tr><td title="首頁">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-house"></i>&nbsp;&nbsp;&nbsp;&nbsp;首頁</td></tr>
+      <tr><td title="探索">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-compass"></i>&nbsp;&nbsp;&nbsp;&nbsp;探索</td></tr>
+      <tr><td title="Shorts">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="home" src="./img/shorts.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;Shorts</td></tr>
+      <tr><td title="訂閱內容">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-film"></i>&nbsp;&nbsp;&nbsp;&nbsp;訂閱內容</td></tr>
+      <tr><td class="hr"><hr style="margin: 0;"></td></tr>
+      <tr><td title="媒體庫">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-photo-film"></i>&nbsp;&nbsp;&nbsp;&nbsp;媒體庫</td></tr>
+      <tr><td title="觀看紀錄">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-clock-rotate-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;觀看紀錄</td></tr>
+      <tr><td title="你的影片">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;&nbsp;&nbsp;你的影片</td></tr>
+      <tr><td title="稍後觀看">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-clock"></i>&nbsp;&nbsp;&nbsp;&nbsp;稍後觀看</td></tr>
+      <tr><td title="喜歡的影片">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-thumbs-up"></i>&nbsp;&nbsp;&nbsp;&nbsp;喜歡的影片</td></tr>
+      <tr><td title="運動">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-person-walking-arrow-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;運動</td></tr>
+      <tr><td class="hr"><hr style="margin: 0;"></td></tr>
+      <tr><td title="訂閱內容" style="font-size: 15px;color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;訂閱內容</td></tr>
+      <tr><td title="瀏覽頻道">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-plus"></i>&nbsp;&nbsp;&nbsp;&nbsp;瀏覽頻道</td></tr>
+      <tr><td class="hr"><hr style="margin: 0;"></td></tr>
+      <tr><td title="更多 YouTube 功能" style="font-size: 15px;color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多 YouTube 功能</td></tr>
+      <tr><td title="YouTube Premium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-youtube"></i>&nbsp;&nbsp;&nbsp;&nbsp;YouTube Premium</td></tr>
+      <tr><td title="電影">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-film"></i>&nbsp;&nbsp;&nbsp;&nbsp;電影</td></tr>
+      <tr><td title="遊戲">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-gamepad"></i>&nbsp;&nbsp;&nbsp;&nbsp;遊戲</td></tr>
+      <tr><td title="直播">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-signal"></i>&nbsp;&nbsp;&nbsp;&nbsp;直播</td></tr>
+      <tr><td title="體育">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-trophy"></i>&nbsp;&nbsp;&nbsp;&nbsp;體育</td></tr>
+      <tr><td class="hr"><hr style="margin: 0;"></td></tr>
+      <tr><td title="設定">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-gear"></i>&nbsp;&nbsp;&nbsp;&nbsp;設定</td></tr>
+      <tr><td title="檢舉記錄">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-flag"></i>&nbsp;&nbsp;&nbsp;&nbsp;檢舉記錄</td></tr>
+      <tr><td title="說明">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-question"></i>&nbsp;&nbsp;&nbsp;&nbsp;說明</td></tr>
+      <tr><td title="提供意見">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-exclamation"></i>&nbsp;&nbsp;&nbsp;&nbsp;提供意見</td></tr>
+      <tr><td class="hr"><hr style="margin: 0;"></td></tr>
+      <tr> 
+        <td class=cc style="font-size: 14px;"> 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;簡介 媒體 版權 與我們聯絡 <br> 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;創作者 廣告 開發人員 <br>
+        <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;條款 隱私權 政策 與安全性<br>  
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YouTube 運作方式 測試新功能 <br>
+        </td></tr> 
+        <tr>
+          <td class="ccc" style="font-size:12px;color:gray;cursor: auto;" >        
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;© 2022 Google LLC</td>
+        </tr>
+    </table>
+  </div>
+
+  <div class="right">
+    <div class="menu">
+      <table>
+        <tr>
+          <td title="全部"><a href="./main.html" target="iframe" style="text-decoration: none;font-weight: bold;color: red;"  >全部</a></td>
+          <td title="烹飪節目"><a href="./cuisine.html" target="iframe" style="text-decoration: none;font-weight: bold;color: red;" >烹飪節目</a></td>
+          <td title="合輯">合輯</td>
+          <td title="音樂">音樂</td>
+          <td title="直播中">直播中</td>
+          <td title="動畫">動畫</td>
+          <td title="遊戲">遊戲</td>
+          <td title="美容訣竅">美容訣竅</td>
+          <td title="動作冒險遊戲">動作冒險遊戲</td>
+          <td title="旅遊">旅遊</td>
+          <td title="寵物">寵物</td>
+          <td title="最新上傳">最新上傳</td>
+          <td title="已觀看">已觀看</td>
+          <td title="讓你耳目一新的影片">讓你耳目一新的影片</td>
+        </tr>
+      </table>
+
+    </div>
+    <iframe src="./main.html" frameborder="0" name="iframe"></iframe>
+  </div>
+
+  
+</body>
+</html>

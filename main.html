@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background: #F9F9F9;
+      overflow: auto;
+    }
+    /* body::-webkit-scrollbar{
+      display: none;
+    } */
+    body::-webkit-scrollbar { width: 8px;}
+  /* bodyt的軌道 */ 
+    body::-webkit-scrollbar-track { background: transparent }
+  /* body尚未滑到的軌道*/ 
+    body::-webkit-scrollbar-track-piece{ background: transparent; }
+  /* /left的區塊 */ 
+    body:hover::-webkit-scrollbar-thumb { background:gray;border-radius: 5px; }
+    
+    .wrap{
+      width: 100%;
+      height: 100%;
+
+    }
+    .video{
+      position: relative;
+      margin: 5px 5px 30px 3px ;
+      width: 24%;
+      cursor: pointer;
+      display: inline-block;
+
+    }
+
+    .video:hover{
+      transform: scale(1.1);
+      transition: 1s;
+    }
+
+    .video img:nth-child(1){
+      width: 100%;
+    }
+
+    .icon{
+      width: 13%;
+      display: inline-block;
+    }
+
+    .icon img{
+      position: relative;
+      border-radius: 50%;
+      bottom: 42px;
+      left: 4px;
+    }
+
+    .text{
+      position: relative;
+      top: 1px;
+      left: 5px;
+      width: 80%;
+      margin: 0px;
+      padding: 0px;
+      bottom: 5px;
+      display: inline-block;
+    }
+
+    .text p {
+      font-size: 16px;
+      padding: 2px;
+      margin: 0px;
+      /* 只顯示兩行 超出兩行即省略 */
+      overflow: hidden;
+      /* text-overflow: ellipsis; */
+      display: -webkit-box;
+      /* 超出幾行變省略號 */
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .text p:nth-child(2){
+      font-size: 14px;
+      padding: 0px;
+      color: #575757;
+
+      overflow: hidden;
+      /* text-overflow: ellipsis; */
+      display: -webkit-box;
+      /* 超出幾行變省略號 */
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+    .text p:nth-child(3){
+      font-size: 14px;
+      /* padding: 0px; */
+      color: #575757;
+      margin:0px 0px 0px -2px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=BMXhf0iwwcw&t=9s&ab_channel=%E5%AE%89%E5%95%BE%E5%92%AA" target="_blank">
+      <img src="./img/安啾.jpg" alt="冰淇淋塔知育菓子🍦質感竟然真實的不可思議！| 安啾 (ゝ∀･) ♡" title="冰淇淋塔知育菓子🍦質感竟然真實的不可思議！| 安啾 (ゝ∀･) ♡"></a>
+    <div class="icon">   
+      <a href="https://www.youtube.com/c/anjouclever103"><img src="./img/安啾ic.jpg" title="安啾咪"></div></a>
+    <div class="text">
+      <p>冰淇淋塔知育菓子🍦質感竟然真實的不可思議！| 安啾 ♡</p>
+      <p>安啾咪</p>
+      <P>觀看次數：11萬次 · 7 天前</P>
+    </div>
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=j4qyBX4KcBg&ab_channel=%E9%9F%93%E5%8B%BE%E3%84%9F%E9%87%91%E9%87%9D%E8%8F%87%EC%B0%90%EC%A9%90%EA%BE%B8" target="_blank">
+      <img src="./img/韓國金針.jpg" alt="讓在台韓國人尖叫的5種「超稀有韓國食物」😭在台灣尋寶韓國人最想念的家常菜｜韓勾ㄟ金針菇 찐쩐꾸" title="讓在台韓國人尖叫的5種「超稀有韓國食物」😭在台灣尋寶韓國人最想念的家常菜｜韓勾ㄟ金針菇 찐쩐꾸"></a>
+    <div class="icon">   
+      <a href="https://www.youtube.com/channel/UCvcZO0cvDT3rzKtfakL3R5Q"><img src="./img/金針菇小圖.jpg" title="韓勾ㄟ金針菇 찐쩐꾸"></div></a>
+    <div class="text">
+      <p>讓在台韓國人尖叫的5種「超稀有韓國食物」😭在台灣尋寶韓國人最想念的家常菜｜韓勾ㄟ金針菇 찐쩐꾸</p>
+      <p>韓勾ㄟ金針菇 찐쩐꾸</p>
+      <P>觀看次數：38萬次 · 19 小時前</P>
+  </div>
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=Qq-KmtF_tg0&list=RDQq-KmtF_tg0&index=1&ab_channel=%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86%E9%9F%B3%E4%B9%90%E9%A2%91%E9%81%93ZJSTVMusicChannel-%E6%AC%A2%E8%BF%8E%E8%AE%A2%E9%98%85-" target="_blank">
+      <img src="./img/孤勇者.jpg" alt="純享丨張韶涵/蘇見信《孤勇者》 堅定有力的聲音力量感滿滿 #天賜的聲音3 EP1 20220311" title="純享丨張韶涵/蘇見信《孤勇者》 堅定有力的聲音力量感滿滿 #天賜的聲音3 EP1 20220311"></a>
+    <div class="icon">   
+      <a href="https://www.youtube.com/channel/UCp8cPvx_Od76EL66vvCnhRA"><img src="./img/孤勇者小圖.jpg" title="中國浙江衛視官方頻道 Zhejiang STV Official Channel - 歡迎訂閱"></div></a>
+    <div class="text">
+      <p>純享丨張韶涵/蘇見信《孤勇者》 堅定有力的聲音力量感滿滿 #天賜的聲音3 EP1 20220311</p>
+      <p>中國浙江衛視官方頻道 Zhejiang STV Official Channel - 歡迎訂閱 -</p>
+      <P>觀看次數：114萬次 · 1 個月前</P>
+  </div>
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=DG261TsKNVM&ab_channel=%E8%8E%AB%E5%BD%A9%E6%9B%A6Hailey" target="_blank">
+      <img src="./img/mcx.jpg" alt="【開箱美國漢堡王】沒有炸雞翅？素食華堡？台灣漢堡王上美國新聞" title="【開箱美國漢堡王】沒有炸雞翅？素食華堡？台灣漢堡王上美國新聞""></a>
+    <div class="icon">   
+      <a href="https://www.youtube.com/channel/UCZqsvi6uhFrbsJcAmcZudcQ"><img src="./img/mcx小圖.jpg" title="莫彩曦Hailey"></div></a>
+    <div class="text">
+      <p>
+        【開箱美國漢堡王】沒有炸雞翅？素食華堡？台灣漢堡王上美國新聞
+      </p>
+      <p>
+        莫彩曦Hailey
+      </p>
+      <P>觀看次數：41萬次 · 2 個月前</P>
+  </div>
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=zlRlsIlVCu0&ab_channel=%E5%8F%B0%E7%81%A3%E7%B4%A2%E5%B0%BC%E9%9F%B3%E6%A8%82SonyMusicTaiwan" title="卡蜜拉 Camila Cabello / 怪咖 psychofreak feat. WILLOW (中字MV)" target="_blank">
+      <img src="./img/freak.jpg" alt="卡蜜拉 Camila Cabello / 怪咖 psychofreak feat. WILLOW (中字MV)"></a>
+    <div class="icon">   
+      <a href="https://www.youtube.com/channel/UCFtUq0ml-coWmD70Pt_urRA"><img src="./img/freak 小.jpg" title="台灣索尼音樂 Sony Music Taiwan"></div></a>
+    <div class="text">
+      <p>
+        卡蜜拉 Camila Cabello / 怪咖 psychofreak feat. WILLOW (中字MV)
+      </p>
+      <p>
+        台灣索尼音樂 Sony Music Taiwan
+      </p>
+      <P>觀看次數：9.2萬次 · 2 週前</P>
+  </div>
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=b_rn7bwD8qQ&ab_channel=BillieEilishVEVO" target="_blank">
+      <img src="./img/bille大.jpg" alt="Billie Eilish - Happier Than Ever (From Disney’s Happier Than Ever: A Love Letter To LA)"  title="Billie Eilish - Happier Than Ever (From Disney’s Happier Than Ever: A Love Letter To LA)" ></a>
+    <div class="icon">   
+      <a href="https://www.youtube.com/channel/UCiGm_E4ZwYSHV3bcW1pnSeQ"><img src="./img/billie.jpg" title="Billie Eilish"></div></a>
+    <div class="text">
+      <p style="margin: 4px;">
+        Billie Eilish - Happier Than Ever (From Disney’s Happier Than Ever: A Love Letter To LA)
+      </p>
+      <p>        
+        Billie Eilish
+      </p>
+      <P>觀看次數：2023萬次 · 7 個月前</P>
+  </div>
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=6j928wBZ_Bo&ab_channel=Jessi" target="_blank">
+      <img src="./img/jessi.jpg" alt="Jessi (제시) - 'ZOOM' MV" title="Jessi (제시) - 'ZOOM' MV"></a>
+    <div class="icon">   
+      <a href="https://www.youtube.com/channel/UCN2bQLTTvNPZWCWU5TYghKA"><img src="./img/jessi小.jpg" title="Jessi"></div></a>
+    <div class="text">
+      <p style="margin: 12px 0px 12px 0px;">
+        Jessi (제시) - 'ZOOM' MV
+      </p>
+      <p>      
+        Jessi
+      </p>
+      <P>觀看次數：2567萬次 · 2 週前</P>
+  </div>
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=lMZkKqQGi_Q&ab_channel=%E9%A3%BD%E5%A6%AE" title="【怪獸與鄧不利多的秘密】不是說超級難看，只能說不是最爛。" target="_blank">
+      <img src="./img/保尼.jpg" alt="【怪獸與鄧不利多的秘密】不是說超級難看，只能說不是最爛。"></a>
+    <div class="icon">   
+      <a href="https://www.youtube.com/channel/UC3InDuUC4uq1SVLoKW0mcfw"><img src="./img/保尼小.jpg" title=" 飽妮"></div></a>
+    <div class="text">
+      <p>
+        【怪獸與鄧不利多的秘密】不是說超級難看，只能說不是最爛。
+      </p>
+      <p>
+        飽妮
+      </p>
+      <P>觀看次數：7.5萬次 · 2 週前</P>
+  </div>
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=zm-MGe1x-z0&ab_channel=%E5%A5%BD%E5%91%B3%E5%B0%8F%E5%A7%90LadyFlavor" target="_blank">
+      <img src="./img/好味2.jpg" alt="【好味小姐】全家都睡著後⋯米香竟然！｜好味貓日常EP103" title="【好味小姐】全家都睡著後⋯米香竟然！｜好味貓日常EP103"></a>
+    <div class="icon">   
+      <a href="https://www.youtube.com/channel/UCOz7W0VH--2WlqAE_3jtL4w"><img src="./img/好味2小.jpg" title="好味小姐 Lady Flavor"></div></a>
+    <div class="text">
+      <p>
+        【好味小姐】全家都睡著後⋯米香竟然！｜好味貓日常EP103
+      </p>
+      <p>    
+        好味小姐 Lady Flavor
+      </p>
+      <P>觀看次數：73萬次 · 1 週前</P>
+  </div>
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=pDA72l8bQ8g&ab_channel=%E9%98%BF%E7%BF%B0po%E5%BD%B1%E7%89%87" target="_blank">
+      <img src="./img/阿瀚.jpg" alt="阿翰po影片 │紳士泡妞密技 最強泡妞招式全集" title="阿翰po影片 │紳士泡妞密技 最強泡妞招式全集"></a>
+    <div class="icon">   
+      <a href="https://www.youtube.com/channel/UCEBaVKCwLP3UOdSq3LNNqmw"><img src="./img/阿瀚小圖.jpg" title="阿翰po影片"></div></a>
+    <div class="text">
+      <p>
+        阿翰po影片 │紳士泡妞密技 最強泡妞招式全集
+      </p>
+      <p>
+        阿翰po影片
+      </p>
+      <P>觀看次數：47萬次 · 2 年前</P>
+  </div>
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=OiN5f7DT1Og&ab_channel=GEM%E9%84%A7%E7%B4%AB%E6%A3%8B" target="_blank">
+      <img src="./img/萬國.jpg" alt="G.E.M.鄧紫棋【萬國覺醒 RISE】Official Music Video" title="G.E.M.鄧紫棋【萬國覺醒 RISE】Official Music Video"></a>
+    <div class="icon">   
+      <a href="https://www.youtube.com/channel/UCsLWG2t7n9LFsvH0wR2rtpw"><img src="./img/萬國 小.jpg" title="GEM鄧紫棋"></div></a>
+    <div class="text">
+      <p>
+        G.E.M.鄧紫棋【萬國覺醒 RISE】Official Music Video
+      </p>
+      <p>       
+        GEM鄧紫棋
+      </p>
+      <P>觀看次數：365萬次 · 1 年前</P>
+  </div>
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=HNuq0ZepAMA&ab_channel=%E8%A8%B1%E4%BC%AF%26%E7%B0%A1%E8%8A%9D%E2%80%94%E5%80%89%E9%BC%A0%E4%BA%BA" target="_blank">
+      <img src="./img/許博大.jpg" alt="【從零開始養】蛇!有毒?狩獵兇?公蛇有兩個GG?四種寵物蛇飼養【許伯簡芝】Snake" title="【從零開始養】蛇!有毒?狩獵兇?公蛇有兩個GG?四種寵物蛇飼養【許伯簡芝】Snake"></a>
+    <div class="icon">   
+      <a href=""><img src="./img/許博.jpg" title="許伯&簡芝—倉鼠人"></div></a>
+    <div class="text">
+      <p>
+        【從零開始養】蛇!有毒?狩獵兇?公蛇有兩個GG?四種寵物蛇飼養【許伯簡芝】Snake
+      </p>
+      <p>
+        許伯&簡芝—倉鼠人
+      </p>
+      <P>觀看次數：220萬次 · 3 個月前</P>
+  </div>
+  </div>
+
+  </div>
+
+</body>
+</html>
